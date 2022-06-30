@@ -111,19 +111,19 @@ export default {
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .title {
-        font-size: 3.5em;
+        font-size: 3.25em;
     }
     .subtitle {
-        font-size: 1.05em;
+        font-size: 1em;
     }
 }
 
 @media only screen and (max-width: 575px) {
     .title {
-        font-size: 3.25em;
+        font-size: 3em;
     }
     .subtitle {
-        font-size: 1.05em;
+        font-size: .9em;
     }
 }
 
