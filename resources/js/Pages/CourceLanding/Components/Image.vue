@@ -43,5 +43,6 @@ export default {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    -webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%)
 }
 </style>

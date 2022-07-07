@@ -29,6 +29,7 @@ export default {
         height: 150px;
         border-radius: 100%;
         overflow: clip;
+        -webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%)
     }
     .group-thumbnail > img {
         width: 100%;
