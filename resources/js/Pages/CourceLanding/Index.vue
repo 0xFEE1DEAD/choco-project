@@ -13,7 +13,6 @@
     <Inventory></Inventory>
     <Video></Video>
     <Form ref="form"></Form>
-    <FAQ></FAQ>
     <Footer ref="contacts"></Footer>
     <UpButton @scrollTo="scrollTo"></UpButton>
 </template>
@@ -29,7 +28,6 @@ import LearningSteps from './LearningSteps'
 import Inventory from './Inventory'
 import Video from './Video'
 import Form from './Form'
-import FAQ from './FAQ'
 import Footer from './Footer'
 import UpButton from './Components/UpButton'
 import CookiesMessage from './Components/CookiesMessage'
@@ -46,7 +44,6 @@ export default {
         Inventory,
         Video,
         Form,
-        FAQ,
         Footer,
         UpButton,
         CookiesMessage

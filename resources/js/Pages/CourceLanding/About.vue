@@ -1,7 +1,7 @@
 <template>
     <div class="content">
         <div class="information">
-            <img src="/img/alena_cource.webp" class="information-avatar">
+            <img v-lazy="'/img/alena_cource.webp'" class="information-avatar">
             <div class="information-text">
                 <div class="information-text-title">
                     Алёна Банокина

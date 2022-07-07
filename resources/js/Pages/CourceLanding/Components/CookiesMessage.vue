@@ -5,7 +5,7 @@
             Для большей информации можете прочитать <a style="color: #bb457e" href="#">политику конфиденциальности</a>
         </div>
         <div class="cookies-message-btn">
-            <Button @click="acceptAll">Закрыть</Button>
+            <Button @click="acceptAll" :disabled="processing">Закрыть</Button>
         </div>
     </div>
 </template>
@@ -19,11 +19,13 @@ export default {
     },
     data() {
         return {
-            show: true
+            show: true,
+            processing: false
         }
     },
     methods: {
         acceptAll() {
+            this.processing = true;
             this.$inertia.post('/accept-cookies', {}, {
                 preserveScroll: true,
                 onSuccess: this.successSend

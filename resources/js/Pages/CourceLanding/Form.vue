@@ -110,7 +110,6 @@ export default {
     padding-right: 20px;
     font-family: 'Montserrat';
     position: relative;
-    min-height: 100vh;
     padding-bottom: 40px;
     padding-top: 100px;
 }

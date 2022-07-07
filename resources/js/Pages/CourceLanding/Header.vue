@@ -5,7 +5,7 @@
         <div class="header-content">
             <div class="header-content-logo">
                 <span>
-                    chocolater_logo
+                    Chocolatier
                 </span>
             </div>
             <div class="header-content-menu">

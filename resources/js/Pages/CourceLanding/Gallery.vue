@@ -15,15 +15,7 @@
                     @touchend="handleTouchend"
                 ref="galleryWrap"  class="gallery-wrap">
                     <div ref="galleryElement" class="gallery">
-                        <img src="img/studentswork/1.webp">
-                        <img src="img/studentswork/2.webp">
-                        <img src="img/studentswork/3.webp">
-                        <img src="img/studentswork/4.webp">
-                        <img src="img/studentswork/5.webp">
-                        <img src="img/studentswork/6.webp">
-                        <img src="img/studentswork/7.webp">
-                        <img src="img/studentswork/8.webp">
-                        <img src="img/studentswork/9.webp">
+                        <img v-for="i in 45" v-lazy="'img/studentswork/' + (i + 1) + '.webp'" :key="i">
                     </div>
                 </div>
                 <div style="display: flex; align-items: center; margin-left: -20px; z-index: 2; justify-content: center; align-items: center;">

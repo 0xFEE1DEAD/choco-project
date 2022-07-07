@@ -1,7 +1,7 @@
 <template>
     <div class="group-body">
         <div class="group-thumbnail">
-            <img :src="imageSrc">
+            <img v-lazy="imageSrc">
         </div>
         <div class="group-description">
             <slot></slot>

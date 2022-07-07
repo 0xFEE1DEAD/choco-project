@@ -4,7 +4,7 @@
             <div class="information-title">Необходимый инвентарь</div>
             <div class="item">
                 <div class="item-image">
-                    <img src="/img/inventory/plate.webp">
+                    <img v-lazy="'/img/inventory/plate.webp'">
                 </div>
                 <div class="item-description">
                     <div>
@@ -15,7 +15,7 @@
             </div>
             <div class="item">
                 <div class="item-image">
-                    <img src="/img/inventory/pirometer.webp">
+                    <img v-lazy="'/img/inventory/pirometer.webp'">
                 </div>
                 <div class="item-description">
                     <div>
@@ -25,7 +25,7 @@
             </div>
             <div class="item">
                 <div class="item-image">
-                    <img src="/img/inventory/bake.webp">
+                    <img v-lazy="'/img/inventory/bake.webp'">
                 </div>
                 <div class="item-description">
                     <div>
@@ -35,7 +35,7 @@
             </div>
             <div class="item">
                 <div class="item-image">
-                    <img src="/img/inventory/scales.webp">
+                    <img v-lazy="'/img/inventory/scales.webp'">
                 </div>
                 <div class="item-description">
                     <div>
@@ -45,7 +45,7 @@
             </div>
             <div class="item">
                 <div class="item-image">
-                    <img src="/img/inventory/mold.webp">
+                    <img v-lazy="'/img/inventory/mold.webp'">
                 </div>
                 <div class="item-description">
                     <div>
@@ -55,7 +55,7 @@
             </div>
             <div class="item">
                 <div class="item-image">
-                    <img src="/img/inventory/chocolate.webp">
+                    <img v-lazy="'/img/inventory/chocolate.webp'">
                 </div>
                 <div class="item-description">
                     <div>
@@ -65,7 +65,7 @@
             </div>
             <div class="item">
                 <div class="item-image">
-                    <img src="/img/inventory/box.webp">
+                    <img v-lazy="'/img/inventory/box.webp'">
                 </div>
                 <div class="item-description">
                     <div>
@@ -116,6 +116,7 @@ export default {
     margin: 0 40px;
     margin-top: 20px;
     margin-bottom: 20px;
+
 }
 
 .item-image 
@@ -128,7 +129,6 @@ export default {
     width: 200px;
     height: 200px;
 
-    overflow: clip;
     position: relative;
     display: flex;
     justify-content: center;
@@ -138,6 +138,8 @@ export default {
 .item-image > img
 {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .item-description
