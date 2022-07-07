@@ -14,7 +14,7 @@
         <div class="phone">
             <a href="tel:+79994236803">Менеджер по вопросам - Дила, +7 (999) 423-68-03</a>
         </div>
-        <div>© 2022 chokolatier</div>
+        <div>© 2022 Chocolatier</div>
     </div>
 </template>
 

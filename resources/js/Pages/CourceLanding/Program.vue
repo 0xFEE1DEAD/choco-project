@@ -12,7 +12,8 @@
                         <div class="accordion-content-title">
                             Урок 1. Темперирование шоколада
                         </div>
-                        <div>
+                        <Image imageSrc="/img/prog/lesson1.webp"></Image>
+                        <div class="description">
                             <div class="accordion-content-paragraph">
                             Темперирование – это важнейшая часть в работе с шоколадом. 
                             Благодаря нему, ваш шоколад не будет быстро таять в руках, 
@@ -29,36 +30,56 @@
                         <div class="accordion-content-title">
                             Урок 2. Шоколадные буквы
                         </div>
-                        <div>
+                        <Image imageSrc="/img/prog/lesson2.webp"></Image>
+                        <div class="description">
                             Приготовим конфеты с различными начинками в виде букв, из которых
                             можно выложить любую надпись.
                         </div>
                         <div class="accordion-content-title">
                             Урок 3. Медианты
                         </div>
-                        <div>
+                        <Image imageSrc="/img/prog/lesson3.webp"></Image>
+                        <div class="description">
                             Приготовим ровные и красивые шоколадные диски без специальных форм с
                             различным дизайном.
                         </div>
                         <div class="accordion-content-title">
-                            Урок 4. Авторские шоколадные плитки
+                            Урок 4. Ассорти конфеты: сердца, полусферы
                         </div>
-                        <div>
+                        <Image imageSrc="/img/prog/lesson4.webp"></Image>
+                        <div class="description">
+                            Приготовим ровные и красивые шоколадные диски без специальных форм с различным дизайном.
+                        </div>
+                        <div class="accordion-content-title">
+                            Урок 5. Авторские шоколадные плитки
+                        </div>
+                        <Image imageSrc="/img/prog/lesson5.webp"></Image>
+                        <div class="description">
                             Покажу вам несколько техник дизайна, благодаря которым можно создавать
                             от 100 различных видов дизайнерских шоколадок.
                         </div>
                         <div class="accordion-content-title">
-                            Урок 5. Трюфель
+                            Урок 6. Сердце-сюрприз
                         </div>
-                        <div>
-                            Научу вас готовить всеми любимые классические трюфели.
+                        <Image imageSrc="/img/prog/lesson6.webp"></Image>
+                        <div class="description">
+                            Приготовим корпус из шоколада для сердечка-сюрприза, задекорируем его и красиво упакуем.
                         </div>
                         <div class="accordion-content-title">
-                            Урок 6. Упаковка
+                            Урок 7. Упаковка
                         </div>
-                        <div>
+                        <Image imageSrc="/img/prog/lesson7.webp"></Image>
+                        <div class="description">
                             Покажу вам как можно красиво упаковывать свою продукцию, 
                             чтобы она имела привлекательный подарочный вид.
+                        </div>
+
+                        <div class="accordion-content-title">
+                            Бонусный урок. Трюфели
+                        </div>
+                        <Image imageSrc="/img/prog/lesson8.webp"></Image>
+                        <div class="description">
+                            Научу вас готовить всеми любимые классические трюфели.
                         </div>
                     </template>
                 </AccordionItem>
@@ -74,7 +95,8 @@
                         <div class="accordion-content-title">
                             + Урок по корпусным конфетам:
                         </div>
-                        <div>
+                        <Image imageSrc="/img/prog/lesson9.webp"></Image>
+                        <div class="description">
                             <div class="accordion-content-paragraph">
                             Научимся делать корпусные конфеты с начинкой.
                             </div>
@@ -86,7 +108,8 @@
                         <div class="accordion-content-title">
                             + Модуль «Вкусные фото и видео»
                         </div>
-                        <div>
+                        <Image imageSrc="/img/prog/lesson10.webp"></Image>
+                        <div class="description">
                             <div class="accordion-content-paragraph">
                             В этом модуле вы научитесь создавать эстетичный визуал для своего
                             аккаунта, ведь даже самые красивые конфеты, но плохо
@@ -103,7 +126,8 @@
                         <div class="accordion-content-title">
                             + Модуль «Упаковка аккаунта»
                         </div>
-                        <div>
+                        <Image imageSrc="/img/prog/lesson11.webp"></Image>
+                        <div class="description">
                             <div class="accordion-content-paragraph">
                                 В этом модуле вы научитесь составлять свой профиль и ленту в инстаграме.
                             </div>
@@ -121,7 +145,8 @@
                         <div class="accordion-content-title">
                             + Модуль «Выстраивание бизнеса»
                         </div>
-                        <div>
+                        <Image imageSrc="/img/prog/lesson12.webp"></Image>
+                        <div class="description">
                             <div class="accordion-content-paragraph">
                             В этом модуле вы найдете все то, что необходимо знать по развитию свое дела. 
                             От расчета себестоимости и рекламе, до оформления соответствующих документов.
@@ -135,12 +160,9 @@
                             </div>
                         </div>
                         <div class="accordion-content-title">
-                            Бонусный урок
+                            Бонусный урок. Оформление ИП или самозанятого, что выбрать?
                         </div>
                         <div>
-                            <div class="accordion-content-paragraph">
-                            Оформление ип или самозанятого, что выбрать?
-                            </div>
                             Поговорим о сертификации на шоколад. А также поговорим о том, как договариваться о
                             реализации своей продукции в магазинах города.
                         </div>
@@ -153,9 +175,12 @@
 
 <script>
 import AccordionItem from './Components/AccordionItem'
+import Image from './Components/Image'
+
 export default {
     components: {
         AccordionItem,
+        Image
     },
     methods: {
         scrollTo()
@@ -187,7 +212,10 @@ export default {
     font-weight: 700;
     font-size: 1.8em;
 }
-
+.description
+{
+    margin-top: 15px;
+}
 .accordion-block {
     margin: 40px 0px;
     margin-bottom: 0;
