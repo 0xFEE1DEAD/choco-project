@@ -8,7 +8,7 @@
 
     <div ref="content" class="content">
         <div class="background">
-            <img src="/img/cource_form.png" class="background-image">
+            <img v-lazy="'/img/cource_form.webp'" class="background-image">
             <div class="background-overlay"></div>
         </div>
         <div class="contact-form-wrap">

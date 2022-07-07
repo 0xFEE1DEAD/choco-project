@@ -1,14 +1,10 @@
 <template>
-    <div ref="content" class="content">
-        <div class="background">
-            <img src="/img/contact_us_background.webp" class="background-image">
-            <div class="background-overlay"></div>
-        </div>
+    <div ref="content" class="copyright">
         <div class="contacts">
             <a href="https://vk.com/chocolatier_irkutsk" target="__blank">
                 <IconVk fill="white"  style="margin-right: 22px;" :size="50"></IconVk>
             </a>
-            <a href="https://tg.com" target="__blank">
+            <a href="https://t.me/+V3jQ94E6bpU2MmI6" target="__blank">
                 <IconTelegram fill="white" style="margin-right: 22px;" :size="50"></IconTelegram>
             </a>
             <a href="https://instagram.com/chocolatier_irk?igshid=YmMyMTA2M2Y=" target="__blank">
@@ -16,10 +12,8 @@
             </a>
         </div>
         <div class="phone">
-            <a href="tel:+79992365588">+7 999 236 55 88 - Алёна</a>
+            <a href="tel:+79994236803">Менеджер по вопросам - Дила, +7 (999) 423-68-03</a>
         </div>
-    </div>
-    <div class="copyright">
         <div>© 2022 chokolatier</div>
     </div>
 </template>
@@ -93,8 +87,8 @@ export default {
 
 .contacts
 {
-    padding-top: 80px;
-    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 .copyright
 {
@@ -110,6 +104,11 @@ export default {
 {
     max-width: 900px;
     margin: auto;
+    text-align: center;
+}
+.phone
+{
+    margin-bottom: 20px !important;
 }
 .phone > a
 {

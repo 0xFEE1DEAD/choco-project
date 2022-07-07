@@ -13,7 +13,7 @@ createInertiaApp({
       .use(plugin)
       .use(Maska)
       .use(lazyPlugin, {
-        loading: '',
+        loading: '/img/loading.svg',
         error: '',
       })
       .mount(el)
