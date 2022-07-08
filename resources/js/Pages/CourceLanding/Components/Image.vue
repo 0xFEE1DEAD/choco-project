@@ -36,6 +36,7 @@ export default {
     border-radius: 25px;
     overflow: clip;
     max-width: 100%;
+    -webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%)
 }
 
 .beautiful-image > img
@@ -43,6 +44,5 @@ export default {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    -webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%)
 }
 </style>
