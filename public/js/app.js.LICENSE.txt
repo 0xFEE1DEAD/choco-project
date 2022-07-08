@@ -12,3 +12,9 @@
  * (c) 2020-2020 ustbhuangyi
  * Released under the MIT License.
  */
+
+/**
+ * Vue 3 Carousel 0.1.40
+ * (c) 2022
+ * @license MIT
+ */

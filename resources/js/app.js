@@ -3,11 +3,8 @@ import { createInertiaApp } from '@inertiajs/inertia-vue3'
 import { InertiaProgress } from '@inertiajs/progress'
 import Maska from 'maska'
 import lazyPlugin from 'vue3-lazy'
-import {WebpMachine} from "webp-hero"
 
 InertiaProgress.init()
-const webpMachine = new WebpMachine()
-webpMachine.polyfillDocument()
 
 createInertiaApp({
   resolve: name => require(`./Pages/${name}`),

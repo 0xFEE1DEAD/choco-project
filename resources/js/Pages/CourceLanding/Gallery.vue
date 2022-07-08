@@ -2,28 +2,15 @@
     <div ref="content" class="content">
         <div class="information">
             <div class="information-title">Работы наших учеников</div>
-            <div style="display: flex">
-                <div style="display: flex; align-items: center; margin-right: -20px; z-index: 2; justify-content: center; align-items: center;">
-                    <div @click="swipe(-1)" class="arrow-btn">
-                        <ArrowIcon fill="black"  :size="20"></ArrowIcon>
-                    </div>
-                </div>
-                <div 
-                    :style="wrapStyle"
-                    @touchstart="handleTouchstart"
-                    @touchmove="handleTouchmove"
-                    @touchend="handleTouchend"
-                ref="galleryWrap"  class="gallery-wrap">
-                    <div ref="galleryElement" class="gallery">
-                        <img v-for="i in 44" v-lazy="'img/studentswork/' + (i + 1) + '.webp'" :key="i">
-                    </div>
-                </div>
-                <div style="display: flex; align-items: center; margin-left: -20px; z-index: 2; justify-content: center; align-items: center;">
-                    <div @click="swipe(1)"  class="arrow-btn" style="transform: rotate(180deg)">
-                        <ArrowIcon fill="black"  :size="20"></ArrowIcon>
-                    </div>
-                </div>
-            </div>
+            <Carousel :wrap-around="true" :breakpoints="breakpoints">
+                <Slide v-for="i in 44" :key="i">
+                     <img v-lazy="'img/studentswork/' + (i + 1) + '.webp'" :key="'img-' + i">
+                </Slide>
+
+                <template #addons>
+                    <Navigation />
+                </template>
+            </Carousel>
         </div>
     </div>
 </template>
@@ -31,189 +18,41 @@
 <script>
 import AboutGroup from './Components/AboutGroup'
 import ArrowIcon from '../../Icons/arrow.vue'
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 
 export default {
     components: {
         AboutGroup,
-        ArrowIcon
+        ArrowIcon,
+        Carousel,
+        Slide,
+        Pagination,
+        Navigation,
     },
     data() {
-        return {
-            wrapElement: null,
-            touchmoveX: false,
-            touchmoveStartX: 0,
-            movedX: 0,
-            imageIndex: 0,
-            galleryElement: null,
-            touchmoveDirection: 0,
-            swipeCoef: 80,
-            wrapStyle: {
-                scrollBehavior: 'smooth'
+        return  {
+            breakpoints: {
+                500: {
+                    itemsToShow: 1.2,
+                    snapAlign: 'center',
+                },
+                700: {
+                    itemsToShow: 2,
+                    snapAlign: 'center',
+                },
+                1024: {
+                    itemsToShow: 3,
+                    snapAlign: 'start',
+                },
             },
-            scrolled: false
-        }
-    },
-    mounted() {
-        this.wrapElement = this.$refs.galleryWrap;
-        this.galleryElement = this.$refs.galleryElement;
-    },
-    methods: {
-        scrollBy(deltaX) {
-            if(!isNaN(deltaX)) {
-                this.wrapElement.scrollBy(deltaX, 0);
-                this.movedX += deltaX;
-                
-
-                const maxScroll = this.wrapElement.scrollWidth - this.wrapElement.clientWidth;
-                if(this.movedX < 0)
-                {
-                    this.movedX = 0;
-                }
-                
-                if(this.movedX > maxScroll)
-                {
-                    this.movedX = maxScroll;
-                }
-
-                this.scrolled = this.movedX > maxScroll - 60;
-            }
-        },
-        handleTouchstart(e)
-        {
-            if(e)
-            {
-                const touches = e.touches;
-                if(touches && touches.length > 0) {
-                    const firstTouch = touches[0];
-                    this.touchmoveStartX = firstTouch.clientX;
-                    this.wrapStyle.scrollBehavior = 'auto';
-                }
-            }
-        },
-        handleTouchmove(e)
-        {
-            if(e)
-            {
-                const touches = e.touches;
-                if(touches && touches.length > 0) {
-                    const firstTouch = touches[0];
-                    if(this.touchmoveX !== false)
-                    {
-                        this.touchmoveDirection = this.touchmoveStartX - firstTouch.clientX;
-                        this.scrollBy(this.touchmoveX - firstTouch.clientX);
-                    }
-                    this.touchmoveX = firstTouch.clientX;
-                }
-            }
-        },
-        handleTouchend()
-        {
-            if(this.galleryElement) {
-                if(this.touchmoveDirection > 0)
-                {
-                    if(this.touchmoveDirection > this.swipeCoef)
-                    {
-                        this.swipe(1);
-                    }
-                    else
-                    {
-                        this.swipe(0);
-                    }
-                }
-                else
-                {
-                    if(this.touchmoveDirection < this.swipeCoef)
-                    {
-                        this.swipe(-1);
-                    }
-                    else
-                    {
-                        this.swipe(0);
-                    }
-                }
-            }
-            this.touchmoveX = false;
-            this.touchmoveDirection = 0;
-            this.touchmoveStartX = 0;
-        },
-        swipe(direction)
-        {
-            const imgs = this.galleryElement.getElementsByTagName('img');
-
-            if(!(imgs && imgs.length > 0)) {
-                return;
-            }
-
-            if(direction > 0)
-            {
-                if((this.imageIndex >= imgs.length) || this.scrolled) {
-                    return;
-                }
-
-                this.imageIndex++;
-            }
-            else if (direction < 0)
-            {
-                if(this.imageIndex <= 0) {
-                    return;
-                }
-
-                this.imageIndex--;
-            }
-
-            let scrollWidth = 0;
-            for(let i = 0; i < this.imageIndex; i++)
-            {
-                scrollWidth += imgs[i].scrollWidth;
-            }
-
-            let canScroll = false;
-            if(direction > 0)
-            {
-                if(scrollWidth < this.movedX)
-                {
-                    this.swipe(1);
-                }
-                else
-                {
-                    canScroll = true;
-                }
-            }
-            else
-            {
-                if(scrollWidth > this.movedX)
-                {
-                    this.swipe(-1);
-                }
-                else
-                {
-                    canScroll = true;
-                }
-            }
-
-            if(canScroll)
-            {
-                this.wrapStyle.scrollBehavior = 'smooth';                
-                let self = this;
-
-                setTimeout(function() {
-                    self.scrollBy(scrollWidth - self.movedX);
-                    self.wrapElement.scroll(scrollWidth, 0);
-                }, 1);
-            }
-        },
-        scrollTo()
-        {
-            const yOffset = -70; 
-            const y = this.$refs.content.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-            window.scrollTo({top: y, behavior: 'smooth'});
         }
     }
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import 'vue3-carousel/dist/carousel.css';
+
 .content {
     font-family: 'Montserrat';
     margin-top: 30px;
@@ -229,36 +68,12 @@ export default {
     font-size: 1.8em;
 }
 
-.gallery-wrap
-{
-    margin-top: 20px;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    user-select: none;
-}
-
-.gallery {
-    display: flex;
-    user-select: none;
-}
-
-.gallery > img {
-    width: 80vw;
+.carousel__slide > img {
+    width: 100%;
     height: 70vh;
     object-fit: cover;
     padding: 10px;
     border-radius: 30px;
-}
-.arrow-btn
-{
-    border-radius: 50%;
-    cursor: pointer;
-    background: white;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    aspect-ratio: 3/4;
 }
 </style>

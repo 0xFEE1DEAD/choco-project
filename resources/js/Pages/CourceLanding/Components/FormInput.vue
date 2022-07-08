@@ -92,10 +92,9 @@ $error-color: #c90000;
     margin: 0;
     color: black;
     width: 100%;
-    height: 25px;
     font-family: 'Montserrat';
     border: 1px solid black;
-    padding: 24px;
+    padding: 13px;
     border-radius: 8px;
 }
 .form-input-wrapper {
@@ -109,19 +108,19 @@ $error-color: #c90000;
 }
 .form-label {
     position: relative;
-    bottom: -35px;
+    bottom: -32px;
     transition-duration: 70ms;
     margin-left: 25px;
     transition-property: bottom, font-size, margin-left;
     transition-timing-function: ease-in;
-    font-size: 1em;
+    font-size: .9em;
     color: #9B9B9B;
     font-family: 'Montserrat';
 }
 .form-label-opened {
     bottom: -9px;
     margin-left: 10px;
-    font-size: .9em;
+    font-size: .8em;
     background: white;
     color: rgb(1, 1, 70);
     cursor: default;

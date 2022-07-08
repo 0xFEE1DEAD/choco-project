@@ -64,6 +64,7 @@ export default {
         display: flex;
         align-items: center;
         position: relative;
+        font-size: .9em;
     }
 
     .radio-input > label:before

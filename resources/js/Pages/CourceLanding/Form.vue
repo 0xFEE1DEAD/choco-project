@@ -30,7 +30,7 @@
                             {{form.errors.plan}}
                         </div>
                     </div>
-                    <div style="margin-top: 30px;">
+                    <div style="margin-top: 20px;">
                         <RadioInput v-model="form.privacy_agree" id="privacy_agree" square>
                             <span>Согласен на обработку персональных данных в соответствии с <a style="color: #bb457e" href="/privacy" target="__blank">политикой в отношении обработки персональных данных</a></span>
                         </RadioInput>
@@ -174,7 +174,7 @@ export default {
 }
 .form-plain
 {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .form-plain-title
