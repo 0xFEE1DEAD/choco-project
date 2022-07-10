@@ -115,4 +115,11 @@ export default {
     color: white;
     text-decoration: none;
 }
+
+@media only screen and (max-width: 575px) {
+    .copyright
+    {
+        font-size: .8em;
+    }
+}
 </style>

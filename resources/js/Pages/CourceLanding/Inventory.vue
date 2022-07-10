@@ -69,7 +69,7 @@
                 </div>
                 <div class="item-description">
                     <div>
-                        <span>Упаковка</span>(коробочки, ленты)
+                        <span>Упаковка</span> (коробочки, ленты)
                     </div>
                 </div>
             </div>

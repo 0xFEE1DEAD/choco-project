@@ -21,10 +21,10 @@
                     <div class="form-plain">
                         <div class="form-plain-title">Тариф:</div>
                         <RadioInput v-model="form.plan" id="plan-1" value="plan1">
-                            “Шоколад для себя” - 4 990 руб.
+                            “Шоколад для себя” - 4 999 руб.
                         </RadioInput>
                         <RadioInput v-model="form.plan" id="plan-2" value="plan2">
-                            “Бизнес на шоколаде” - 8 990 руб.
+                            “Бизнес на шоколаде” - 8 999 руб.
                         </RadioInput>
                         <div class="error-message">
                             {{form.errors.plan}}
