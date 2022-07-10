@@ -2,7 +2,7 @@
     <div v-show="show" class="cookies-message">
         <div class="cookies-message-text">
             Оставаясь на Веб-сайте, вы соглашаетесь с размещением файлов cookie на вашем компьютере, с целью анализа использования Веб-сайта. Если вы не хотите принимать файлы cookie, вы должны прекратить использование Вебсайта. 
-            Для большей информации можете прочитать <a style="color: #bb457e" href="#">политику конфиденциальности</a>
+            Для большей информации можете прочитать <a style="color: #bb457e" href="/privacy/cookies">политику конфиденциальности</a>
         </div>
         <div class="cookies-message-btn">
             <Button @click="acceptAll" :disabled="processing">Закрыть</Button>

@@ -21,6 +21,11 @@ Route::get('/', [CourceLandingController::class, 'index'])->name('buy-cource');;
 Route::post('/buy', [CourceLandingController::class, 'buy'])->name('buy-cource-handler');
 Route::post('/accept-cookies', [CourceLandingController::class, 'acceptCookies']);
 
-Route::get('/chat-bot', function () {
-    return view('chat-bot');
+Route::get('/privacy', function() {
+    $path = Storage::disk('public')->path('files/Политика в отношении обработки персональных данных.pdf');
+    return response()->file($path);
+});
+Route::get('/privacy/cookies', function() {
+    $path = Storage::disk('public')->path('files/Политика конфиденциальности.pdf');
+    return response()->file($path);
 });
