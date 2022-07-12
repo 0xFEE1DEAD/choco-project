@@ -46,6 +46,15 @@ export default {
                 },
             },
         }
+    },
+    methods: {
+        scrollTo()
+        {
+            const yOffset = -80;
+            const y = this.$refs.content.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+            window.scrollTo({top: y, behavior: 'smooth'});
+        }
     }
 }
 </script>
