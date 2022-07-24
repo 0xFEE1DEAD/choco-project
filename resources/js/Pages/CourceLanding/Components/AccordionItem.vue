@@ -3,7 +3,9 @@
         <div class="accordion-body" @click="toggle">
             <div class="accordion-body-border"></div>
             <div class="accordion-body-content">
-                <slot></slot>
+                <div>
+                    <slot></slot>
+                </div>
                 <div :style="iconStyle" class="accordion-body-content-icon">
                     <ArrowIcon fill="black" :size="20"></ArrowIcon>
                 </div>

@@ -11,7 +11,7 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/appv1.3.js', 'public/js')
+mix.js('resources/js/appv1.31.js', 'public/js')
     .vue({ runtimeOnly: (process.env.NODE_ENV || 'production') === 'production' })
     .postCss('resources/css/app.css', 'public/css', [
         //
