@@ -41,9 +41,25 @@ export default {
 }
 .inner-video
 {
-    width: 70vw;
+    height: 65vh;
     border-radius: 30px;
     margin: auto;
     aspect-ratio: 16/9;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .inner-video
+    {
+        width: 100%;
+        aspect-ratio: auto;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .inner-video
+    {
+        width: 100%;
+        aspect-ratio: auto;
+    }
 }
 </style>
