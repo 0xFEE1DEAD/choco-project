@@ -8,7 +8,7 @@
         </div>
         <div class="show-animate">
             <div class="title">CHOCOLATIER</div>
-            <div class="subtitle">Онлайн курс “Шоколадное дело” с нуля</div>
+            <div class="subtitle">Онлайн-курс “Шоколадное дело” с нуля</div>
             <div class="subtitle" style="font-size: 1em; margin-top: 30px">Освой профессию Шоколатье за 8 недель</div>
             <div style="display: flex; justify-content: center;margin-top: 30px">
                 <Button @click="scroll('form')">Приобрести курс</Button>

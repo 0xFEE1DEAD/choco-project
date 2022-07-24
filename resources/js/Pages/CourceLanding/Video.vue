@@ -3,7 +3,7 @@
         <div class="information">
             <div class="information-title">Небольшое закулисье с курса</div>
             <div class="inner-video-wrap">
-                <iframe class="inner-video" src="https://www.youtube.com/embed/C8hEVyvspzc" 
+                <iframe class="inner-video" src="https://www.youtube.com/embed/Iimd5IDwTRc" 
                     title="Небольшое закулисье с курса" frameborder="0" 
                     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
@@ -42,8 +42,8 @@ export default {
 .inner-video
 {
     width: 70vw;
-    height: 65vh;
     border-radius: 30px;
     margin: auto;
+    aspect-ratio: 16/9;
 }
 </style>

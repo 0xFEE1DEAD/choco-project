@@ -1,4 +1,19 @@
 <template>
+    <Head>
+        <title>Шоколадное дело</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Шоколадное дело">
+        <meta property="og:title" content="Шоколадное дело - курс для начинающих" />
+        <meta property="og:url" content="https://alenabanokina.ru/"/>
+        <meta property="og:locale" content="ru_RU"/>
+        <meta property="og:description" content="Обучение проходит по видео-урокам и с личной, не ограниченной по времени поддержкой от меня в чате Телеграмма.">
+        <meta property="og:image" content="https://alenabanokina.ru/storage/img/social-media.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+    </Head>
+
     <CookiesMessage v-show="!acceptCookies"></CookiesMessage>        
     <Header 
         :contactUsOffsetTop="contactUsOffsetTop"
@@ -32,8 +47,11 @@ import Footer from './Footer'
 import UpButton from './Components/UpButton'
 import CookiesMessage from './Components/CookiesMessage'
 
+import { Head } from '@inertiajs/inertia-vue3'
+
 export default {
     components: {
+        Head,
         Header,
         First,
         About,
