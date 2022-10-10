@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Cource\CourceBuyClaim;
+use App\Jobs\CourceLanding\SendTelegrammClaimMessage;
+use Illuminate\Support\Facades\Log;
 
 class CourceLandingController extends Controller
 {
@@ -26,6 +28,14 @@ class CourceLandingController extends Controller
                 'privacy_agree' => 'required|in:1'
             ])
         );
+
+        try {
+            SendTelegrammClaimMessage::dispatch(
+                "$request->name $request->surname $request->phone оформил(а) заявку"
+            );
+        } catch(\Exception $e) {
+            Log::error($e);
+        }
 
         return redirect(route('buy-cource'));
     }
