@@ -23,7 +23,7 @@ class SendTelegrammClaimMessage implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    protected $chatId = '-629450190';
+    protected $chatId = '-1001728175556';
     protected $message = '';
     public $tries = 3;
     /**

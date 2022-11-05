@@ -30,10 +30,20 @@ class CourceLandingController extends Controller
         );
 
         try {
+            $planDescription = '';
+
+            switch ($request->plan) {
+                case 'plan1':
+                    $planDescription = 'Тариф “Шоколад для себя”';
+                    break;
+                case 'plan2':
+                    $planDescription = 'Тариф “Бизнес на шоколаде”';
+                    break;
+            }
             SendTelegrammClaimMessage::dispatch(
-                "$request->name $request->surname $request->phone оформил(а) заявку"
+                "$request->name $request->surname $request->phone оформил(а) заявку. $planDescription."
             );
-        } catch(\Exception $e) {
+        } catch (\Exception $e) {
             Log::error($e);
         }
 
