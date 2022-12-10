@@ -13,7 +13,7 @@
     <meta property="og:image:height" content="630">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />
-    <script src="{{ mix('/js/appv1.31.js') }}" defer></script>
+    <script src="{{ mix('/js/appv1.32.js') }}" defer></script>
     @inertiaHead
   </head>
   <body style="padding: 0; margin: 0">

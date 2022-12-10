@@ -8,7 +8,7 @@
                 </Slide>
 
                 <template #addons>
-                    <Navigation />
+                    <Navigation class="carousel-recolor" />
                 </template>
             </Carousel>
         </div>

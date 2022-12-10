@@ -4,7 +4,7 @@
             <div class="information-title">Программа курса</div>
             <div class="accordion-block">
                 <AccordionItem>
-                    Тариф «Шоколад для себя» <span style="white-space: nowrap">4 999 руб.</span>
+                    Тариф «Шоколад для себя» <span style="white-space: nowrap">8 999 руб.</span>
                     <template v-slot:content>
                         <div class="accordion-content-accent">
                             Доступ бессрочный, обратная связь не ограничена по времени.
@@ -84,7 +84,7 @@
                     </template>
                 </AccordionItem>
                 <AccordionItem>
-                    Тариф «Бизнес на шоколаде» <span style="white-space: nowrap">8 999 руб.</span>
+                    Тариф «Бизнес на шоколаде» <span style="white-space: nowrap">13 500 руб.</span>
                     <template v-slot:content>
                         <div class="accordion-content-accent">
                             Доступ бессрочный, обратная связь не ограничена по времени.

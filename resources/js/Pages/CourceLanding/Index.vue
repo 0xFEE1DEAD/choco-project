@@ -128,4 +128,10 @@ export default {
     animation-name: show;
     animation-timing-function: ease-in-out; 
 }
+
+.carousel-recolor {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3) !important;
+    background-color: white !important;
+    color: black !important;
+}
 </style>
